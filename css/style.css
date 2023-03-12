@@ -20,25 +20,43 @@ body {
     grid-template-columns: 1fr;
 }
 
-header,
 footer {
     padding: 20px;
 }
 
 section:not(.heading-home) {
     width: 100%;
-    min-height: 80vh;
+    min-height: 50vh;
     padding-top: 3.5em;
     padding-bottom: 3.5em;
 }
 
-
-/* Navbar */
-
-.hamburger {
-    display: block;
+button {
+    background: linear-gradient(rgba(79, 60, 47, 1), rgba(110, 86, 70, 1));
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-color: rgba(1, 9, 12, 1);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-width: 1px;
+    box-shadow: 0px 10px 14px -7px rgba(12, 1, 0, 1);
+    color: var(--color-fondo);
+    cursor: pointer;
+    font-weight: bold;
+    height: 40px;
+    text-shadow: 0px 1px 0px rgba(138, 103, 61, 1);
+    width: 140px;
 }
 
+button:hover {
+    background: linear-gradient(rgba(110, 86, 70, 1), rgba(79, 60, 47, 1));
+}
+
+a:visited {
+    color: inherit;
+}
+
+/* Navbar */
 nav {
     position: fixed;
     top: 0;
@@ -67,6 +85,7 @@ li {
 li a {
     color: #fff;
     padding: 15px;
+    font-size: 1.3em;
 }
 
 li a:hover:not(.dropdown-content a) {
@@ -80,7 +99,7 @@ li a:hover:not(.dropdown-content a) {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: var(--color-fondo);
     min-width: 160px;
     z-index: 1;
     top: 100%;
@@ -96,7 +115,7 @@ li a:hover:not(.dropdown-content a) {
     color: var(--color-texto);
     text-align: center;
     display: block;
-    font-size: 16px;
+    font-size: 1.2em;
     text-decoration: none;
 }
 
@@ -111,7 +130,7 @@ li a:hover:not(.dropdown-content a) {
 
 .logo {
     font-weight: bolder;
-    font-size: 2em;
+    font-size: 3em;
     color: var(--color-fondo);
 }
 
@@ -123,7 +142,6 @@ header.main {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
 }
-
 
 .heading-home {
     height: 80vh;
@@ -167,6 +185,9 @@ header.main {
     z-index: 2;
 }
 
+#header-text-about {
+    color: var(--color-fondo);
+}
 
 /* Fin cabecera */
 
@@ -208,7 +229,6 @@ section.productos {
 
 .card:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
 }
 
 .card img {
@@ -221,7 +241,6 @@ section.productos {
     font-size: 18px;
     margin-top: 10px;
 }
-
 
 /* Fin productos */
 
@@ -259,6 +278,11 @@ section.productos {
     margin: 20px;
     display: flex;
     padding: 20px;
+    transition: width 0.5s ease-in-out;
+}
+
+.noticias-eventos .card:hover {
+    width: 560px;
 }
 
 .text-noticias {
@@ -280,10 +304,232 @@ section.productos {
 
 /* Fin noticias y eventos */
 
+/* Nuestra historia */
+.historia h1 {
+    text-align: center;
+    color: var(--color-texto);
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.historia {
+    background-color: var(--color-fondo);
+    display: flex;
+    flex-direction: column;
+}
+
+.historia p {
+    color: var(--color-texto);
+    width: 500px;
+    font-size: 1.1em;
+    line-height: 2;
+}
+
+.hist-imgtext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10em;
+}
+
+.hist-imgtext img {
+    height: 300px;
+    width: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hist-imgtext:hover img {
+    opacity: 0.8;
+}
+
+/* Fin nuestra historia */
+
+/* Equipo */
+.equipo {
+    background-color: var(--color-fondo);
+}
+
+.equipo h1 {
+    text-align: center;
+    color: var(--color-texto);
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.equipo p {
+    color: var(--color-texto);
+}
+
+.equipo-presentacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.miembro {
+    width: 300px;
+    margin: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.miembro:hover {
+    transform: scale(1.1);
+}
+
+.miembro img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.miembro h2 {
+    margin-top: 20px;
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+.miembro p {
+    margin-top: 10px;
+    font-size: 1.25em;
+    margin: 10px;
+}
+
+/* Fin equipo */
+
+/* Formulario */
+
+.form-section {
+    display: flex;
+    justify-content: center;
+}
+
+.formulario {
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 70vh;
+}
+
+.formulario img {
+    max-width: 300px;
+    height: 500px;
+    margin-right: 20px;
+    border-radius: 5px 0 0 5px;
+    object-fit: cover;
+}
+
+.formulario form {
+    width: 100%;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.formulario textarea {
+    width: 90%;
+}
+
+#gender {
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.gender {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.gender div {
+    display: inline-flex;
+    gap: 0.3em;
+}
+
+.formulario button {
+    margin: 0.3em;
+}
+
+@media screen and (max-width: 768px) {
+    .formulario {
+        flex-direction: column;
+    }
+
+    .formulario img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* Fin formulario */
+
+/* Horario oficina */
+
+.horario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.horario-oficina {
+    width: 70%;
+    align-items: center;
+    border-collapse: collapse;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.horario-oficina tr {
+    transition: background-color 0.3s ease-in-out;
+
+}
+
+.horario-oficina tr:hover {
+    background-color: var(--color-enlace);
+    color: var(--color-fondo);
+}
+
+.horario-oficina th {
+    background-color: var(--color-texto);
+    color: var(--color-fondo);
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+
+.horario-oficina td {
+    border: 1px solid var(--color-fondo);
+    padding: 10px;
+    text-align: center;
+}
+
+.horario-oficina tr:nth-child(even) {
+    background-color: var(--color-separador);
+    color: var(--color-fondo);
+}
+
+/* Fin horario */
+
 /* Footer */
 footer {
     width: 100%;
-    height: 30vh;
+    /* height: 30vh; */
     padding-top: 3.5em;
     padding-bottom: 3.5em;
     background-color: var(--color-separador);
@@ -305,7 +551,6 @@ footer a:hover {
     color: var(--color-enlace);
 }
 
-
 .site-map {
     display: flex;
     flex-direction: column;
@@ -313,7 +558,7 @@ footer a:hover {
 
 .general-info {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -332,77 +577,72 @@ footer a:hover {
     justify-content: center;
 }
 
-
-
 /* Fin footer */
 
 /* Media querys */
-@media screen and (max-width: 768px) {
-    .footer-links {
+@media only screen and (max-width: 920px) {
+
+    /* Navbar */
+    nav {
+        padding: 5px 0;
+        justify-content: space-around;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    /* Header */
+
+    .heading-home {
+        height: auto;
+    }
+
+    .heading-home h1 {
+        font-size: 1.5em;
+        top: 70%;
+        color: var(--color-fondo);
+    }
+
+    .heading-home button {
+        display: none;
+    }
+
+    .heading-home p {
+        display: none;
+    }
+
+    /* Formulario */
+
+    .formulario {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        width: 50vh;
+        height: auto;
+        padding: 2em;
     }
-}
 
-@media only screen and (max-width: 600px) {
-  nav ul {
-    display: none;
-  }
-  
-  .hamburger {
-    display: block;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: none;
-  }
-  
-  .dropdown .dropdown-content {
-    position: static;
-    display: none;
-  }
-  
-  .dropdown .dropdown-content li {
-    text-align: center;
-  }
-  
-  .dropdown .dropdown-content a {
-    display: block;
-    padding: 10px 0;
-  }
-  
-  .hamburger {
-    background-color: var(--color-texto);
-    color: var(--color-fondo);
-    border: none;
-    padding: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    z-index: 100;
-  }
-  
-  .hamburger:focus {
-    outline: none;
-  }
-  
-  nav ul.show {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-texto);
-    z-index: 99;
-  }
-  
-  nav ul.show li {
-    margin: 10px 0;
-  }
+    .formulario form {
+        width: auto;
+    }
+
+    .formulario img {
+        display: none;
+    }
+
+    /* Footer */
+
+    .general-info {
+        flex-direction: column;
+    }
+
+    .general-info>div,
+    .legal-info {
+        margin: 1em;
+    }
 }

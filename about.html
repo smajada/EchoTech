@@ -1,73 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://kit.fontawesome.com/1b3d829e55.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://kit.fontawesome.com/1b3d829e55.css" crossorigin="anonymous" />
 </head>
+
 <body>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle">☰</label>
+    <nav>
+        <h1 class="logo">EchoTech</h1>
+        <ul>
+            <li><a href="/index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="/about.html">Sobre nosotros</a>
+				<div class="dropdown-content">
+					<a href="/about.html#historia">Historia</a>
+					<a href="/about.html#equipo">Equipo</a>
+				</div>
+            </li>
+            <li><a href="/contact.html">Contacto</a></li>
+        </ul>
+    </nav>
+
     <header>
-        <nav>
-            <h1 class="logo">EchoTech</h1>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="/about.html">About</a>
-                    <div class="dropdown-content">
-                        <a href="#">Our Story</a>
-                        <a href="#">Our Team</a>
-                        <a href="#">Our Mission</a>
-                    </div>
-                </li>
-                <li><a href="/contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <!-- cabecera -->
+        <section class="heading-home">
+            <img id="img-heading-home"
+                src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                alt="" />
+            <div class="text-heading"></div>
+            <h1 id="header-text-about">Sobre nosotros</h1>
+            <p class="header-text" id="header-text-about">
+                Nuestra misión es mejorar la salud y el bienestar de las personas a
+                través de productos farmacéuticos innovadores y de calidad
+            </p>
+        </section>
+        <!-- fin cabecera-->
     </header>
+    <!-- Historia -->
+    <main>
+        <section class="historia" id="historia">
+            <h1>Nuestra historia</h2>
+                <div class="hist-imgtext">
+                    <img src="https://images.unsplash.com/photo-1670272502972-cccb4b96c4f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                        alt="">
+                    <p>En 2018, un grupo de profesionales fundó una empresa farmacéutica innovadora y comprometida con
+                        el bienestar de las
+                        personas. Trabajaron arduamente para crear una línea de productos de alta calidad y eficacia,
+                        superando obstáculos y
+                        desafíos. Hoy en día, la empresa es líder en el mercado y sigue avanzando en la creación de
+                        soluciones innovadoras
+                        para mejorar la calidad de vida de las personas.</p>
+                </div>
+
+        </section>
+        <!-- Fin historia -->
+
+        <!-- Equipo -->
+        <section class="equipo" id="equipo">
+            <h1>Nuestros fundadores</h1>
+
+            <div class="equipo-presentacion">
+                <div class="miembro">
+                    <img src="/img/LauraMartinez.jpg" alt="Miembro del miembro">
+                    <h2>Laura Martínez</h2>
+                    <p>Directora Ejecutiva</p>
+                </div>
+
+                <div class="miembro">
+                    <img src="/img/DavidSanchez.jpg" alt="Miembro del equipo">
+                    <h2>David Sánchez</h2>
+                    <p>Director de investigación y Desarrollo</p>
+                </div>
+
+                <div class="miembro">
+                    <img src="/img/AnaGarcia.jpg" alt="Miembro del equipo">
+                    <h2>Ana García</h2>
+                    <p>Directora de Marketing y Ventas</p>
+                </div>
+            </div>
+
+        </section>
+        <!-- Fin equipo -->
+    </main>
+
     <footer>
-        <div class="general-info">
-        <div class="contact-info">
-            <p>Dirección: 1234 Calle Principal, Ciudad, País</p>
-            <p>Teléfono: 123-456-7890</p>
-            <p>Correo electrónico: info@farmaceutica.com</p>
-        </div>
+		<div class="general-info">
+			<div class="contact-info">
+				<h3>Información de contacto</h3>
+				<p>1234 Calle Principal, Ciudad, País</p>
+				<p>123-456-7890</p>
+				<p>info@farmaceutica.com</p>
+			</div>
 
-        <div class="social-media">
-            <a href="https://www.facebook.com/farmaceutica"
-                ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a href="https://twitter.com/farmaceutica"
-                ><i class="fab fa-twitter"></i
-            ></a>
-            <a href="https://www.instagram.com/farmaceutica"
-                ><i class="fab fa-instagram"></i
-            ></a>
-        </div>
+			<div class="legal-info">
+				<h3>Información legal</h3>
+				<a href="privacidad.html">Política de privacidad</a>
+				<a href="terminos.html">Términos y condiciones</a>
+				<p>&copy; 2023 EchoTech S.A. Todos los derechos reservados.</p>
+			</div>
 
-        <div class="useful-links">
-            <a href="https://www.who.int/es"
-                > Organización Mundial de la
-                Salud</a
-            >
-            <a href="https://medlineplus.gov/spanish/"
-                > MedlinePlus</a
-            >
-        </div>
-
-        <div class="site-map">
-            <a href="index.html">Inicio</a>
-            <a href="productos.html">Productos</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="contacto.html">Contacto</a>
-        </div>
-    </div>
-        <div class="legal-info">
-            <a href="privacidad.html">Política de privacidad</a>
-            <a href="terminos.html">Términos y condiciones</a>
-            <p>&copy; 2023 EchoTech S.A. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+			<div class="site-map">
+				<h3>Mapa del sitio</h3>
+				<a href="index.html">Inicio</a>
+				<a href="about.html">Nosotros</a>
+				<a href="contact.html">Contacto</a>
+			</div>
+			<div class="useful-links">
+				<h3>Enlaces de interés</h3>
+				<a href="https://www.who.int/es"> Organización Mundial de la Salud</a>
+				<a href="https://medlineplus.gov/spanish/"> MedlinePlus</a>
+			</div>
+		</div>
+	</footer>
 </body>
+
 </html>

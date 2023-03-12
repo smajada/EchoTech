@@ -1,73 +1,173 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Contact</title>
-		<link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="https://kit.fontawesome.com/1b3d829e55.css" crossorigin="anonymous">
-	</head>
-	<body>
-		<header>
-			<nav>
-				<h1 class="logo">EchoTech</h1>
-				<ul>
-					<li><a href="/index.html">Home</a></li>
-					<li class="dropdown">
-						<a href="/about.html">About</a>
-						<div class="dropdown-content">
-							<a href="#">Our Story</a>
-							<a href="#">Our Team</a>
-							<a href="#">Our Mission</a>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Contact</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="https://kit.fontawesome.com/1b3d829e55.css" crossorigin="anonymous">
+</head>
+
+<body>
+	<!-- Inicio navbar -->
+    <nav>
+        <h1 class="logo">EchoTech</h1>
+        <ul>
+            <li><a href="/index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="/about.html">Sobre nosotros</a>
+				<div class="dropdown-content">
+					<a href="/about.html#historia">Historia</a>
+					<a href="/about.html#equipo">Equipo</a>
+				</div>
+            </li>
+            <li><a href="/contact.html">Contacto</a></li>
+        </ul>
+    </nav>
+	<!-- Fin navbar -->
+	<header>
+		<!-- cabecera -->
+		<section class="heading-home">
+			<img id="img-heading-home"
+				src="/img/duy-pham-Cecb0_8Hx-o-unsplash.jpg"
+				alt="" />
+			<div class="text-heading"></div>
+			<h1>Contacta con nosotros</h1>
+			<p class="header-text">
+				Estamos aquí para responder cualquier pregunta que tengas sobre nuestros productos y servicios,<br>
+				no dudes en contactarnos
+			</p>
+			<button class="action-button"><a href="/about.html">About us</a></button>
+		</section>
+		<!-- fin cabecera-->
+	</header>
+
+	<main>
+		<section class="form-section">
+			<div class="formulario">
+				<img src="/img/austin-distel-7bMdiIqz_J4-unsplash.jpg" alt="Imagen de la farmacéutica">
+				<form action="procesar.php" method="POST">
+					<label for="nombre">Nombre</label>
+					<input type="text" id="nombre" name="nombre" required>
+
+					<label for="email">Correo electrónico</label>
+					<input type="email" id="email" name="email" required>
+
+					<label for="telefono">Teléfono</label>
+					<input type="tel" id="telefono" name="telefono" required>
+
+					<label for="mensaje">Mensaje</label>
+					<textarea id="mensaje" name="mensaje" pattern="+[0-9]{2}[0-9]{9}" required></textarea>
+
+					<p id="gender">Elige tu sexo</p>
+					<div class="gender">
+						<div>
+							<input type="radio" value="male" name="gender" />
+							<label for="male">Male</label>
 						</div>
-					</li>
-					<li><a href="/contact.html">Contact</a></li>
-				</ul>
-			</nav>
-		</header>
-        <footer>
-            <div class="general-info">
+						<br />
+						<div>
+							<input type="radio" value="female" name="gender" checked />
+							<label for="female">Female</label>
+						</div>
+						<br />
+						<div>
+							<input type="radio" value="other" name="gender" />
+							<label for="other">Other</label>
+						</div>
+					</div>
+
+					<br>
+					<button type="submit">Enviar</button>
+					<button type="reset">Restablecer</button>
+				</form>
+			</div>
+		</section>
+
+		<section class="horario">
+			<table class="horario-oficina">
+				<thead>
+					<tr>
+						<th>Día</th>
+						<th>Horario de apertura</th>
+						<th>Horario de cierre</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Lunes</td>
+						<td>9:00 AM</td>
+						<td>6:00 PM</td>
+					</tr>
+					<tr>
+						<td>Martes</td>
+						<td>9:00 AM</td>
+						<td>6:00 PM</td>
+					</tr>
+					<tr>
+						<td>Miércoles</td>
+						<td>9:00 AM</td>
+						<td>6:00 PM</td>
+					</tr>
+					<tr>
+						<td>Jueves</td>
+						<td>9:00 AM</td>
+						<td>6:00 PM</td>
+					</tr>
+					<tr>
+						<td>Viernes</td>
+						<td>9:00 AM</td>
+						<td>6:00 PM</td>
+					</tr>
+					<tr>
+						<td>Sábado</td>
+						<td>10:00 AM</td>
+						<td>2:00 PM</td>
+					</tr>
+					<tr>
+						<td>Domingo</td>
+						<td>Cerrado</td>
+						<td>Cerrado</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+	</main>
+
+	<!-- Inicio footer -->
+	<footer>
+		<div class="general-info">
 			<div class="contact-info">
-				<p>Dirección: 1234 Calle Principal, Ciudad, País</p>
-				<p>Teléfono: 123-456-7890</p>
-				<p>Correo electrónico: info@farmaceutica.com</p>
+				<h3>Información de contacto</h3>
+				<p>1234 Calle Principal, Ciudad, País</p>
+				<p>123-456-7890</p>
+				<p>info@farmaceutica.com</p>
 			</div>
 
-			<div class="social-media">
-				<a href="https://www.facebook.com/farmaceutica"
-					><i class="fab fa-facebook-f"></i
-				></a>
-				<a href="https://twitter.com/farmaceutica"
-					><i class="fab fa-twitter"></i
-				></a>
-				<a href="https://www.instagram.com/farmaceutica"
-					><i class="fab fa-instagram"></i
-				></a>
-			</div>
-
-			<div class="useful-links">
-				<a href="https://www.who.int/es"
-					> Organización Mundial de la
-					Salud</a
-				>
-				<a href="https://medlineplus.gov/spanish/"
-					> MedlinePlus</a
-				>
+			<div class="legal-info">
+				<h3>Información legal</h3>
+				<a href="privacidad.html">Política de privacidad</a>
+				<a href="terminos.html">Términos y condiciones</a>
+				<br>
+				<p>&copy; 2023 EchoTech S.A. Todos los derechos reservados.</p>
 			</div>
 
 			<div class="site-map">
+				<h3>Mapa del sitio</h3>
 				<a href="index.html">Inicio</a>
-				<a href="productos.html">Productos</a>
-				<a href="nosotros.html">Nosotros</a>
-				<a href="contacto.html">Contacto</a>
+				<a href="about.html">Nosotros</a>
+				<a href="contact.html">Contacto</a>
 			</div>
-        </div>
-            <div class="legal-info">
-				<a href="privacidad.html">Política de privacidad</a>
-				<a href="terminos.html">Términos y condiciones</a>
-				<p>&copy; 2023 EchoTech S.A. Todos los derechos reservados.</p>
+			<div class="useful-links">
+				<h3>Enlaces de interés</h3>
+				<a href="https://www.who.int/es"> Organización Mundial de la Salud</a>
+				<a href="https://medlineplus.gov/spanish/"> MedlinePlus</a>
 			</div>
-		</footer>
-	</body>
+		</div>
+	</footer>
+	<!-- Fin footer -->
+</body>
+
 </html>
