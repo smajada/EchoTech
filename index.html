@@ -6,12 +6,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>EchoTech</title>
 		<link rel="stylesheet" href="css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://kit.fontawesome.com/1b3d829e55.css"
+			crossorigin="anonymous"
+		/>
+		crossorigin="anonymous">
 	</head>
 	<body>
 		<header>
 			<!-- Navbar -->
 			<nav>
 				<h1 class="logo">EchoTech</h1>
+                <button class="hamburger">&#9776;</button>
 				<ul>
 					<li><a href="/index.html">Home</a></li>
 					<li class="dropdown">
@@ -30,33 +37,64 @@
 		<main>
 			<!-- cabecera -->
 			<section class="heading-home">
-				<img id="img-heading-home" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.elfaradio.com%2Fwp-content%2Fuploads%2F2021%2F02%2Fcantabrialabs-scaled-e1614418910591.jpg&f=1&nofb=1&ipt=e389b6fc089db7b5366c2fcfe7d8b4ee618724d00bc3e609fbf3459eb31630e6&ipo=images" alt="">
+				<img
+					id="img-heading-home"
+					src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.elfaradio.com%2Fwp-content%2Fuploads%2F2021%2F02%2Fcantabrialabs-scaled-e1614418910591.jpg&f=1&nofb=1&ipt=e389b6fc089db7b5366c2fcfe7d8b4ee618724d00bc3e609fbf3459eb31630e6&ipo=images"
+					alt=""
+				/>
 				<div class="text-heading"></div>
 				<h1>Embrace the future</h1>
 				<p class="header-text">
-					Juntos, hacia una vida más saludable: Nuestra farmacéutica está comprometida con tu bienestar y el de tu familia.
+					Juntos, hacia una vida más saludable <br> Nuestra farmacéutica está
+					comprometida con tu bienestar y el de tu familia
 				</p>
-				<button class="action-button">About us</button>
+				<button class="action-button"><a href="/about.html">About us</a></button>
 			</section>
 			<!-- fin cabecera-->
 
 			<!-- Productos -->
 			<section class="tendencias">
-				<h1>Nuevos productos</h1>
-				<div class="products">
-					<h3>Titulo</h3>
-				</div>
-				<div class="products">
-					<h3>Titulo</h3>
-				</div>
-				<div class="products">
-					<h3>Titulo</h3>
-				</div>
-				<div class="products">
-					<h3>Titulo</h3>
-				</div>
-				<div class="products">
-					<h3>Titulo</h3>
+				<h1>Últimos Productos</h1>
+				<div class="container">
+					<div class="card">
+						<img
+							src="https://via.placeholder.com/150"
+							alt="Placeholder Image"
+						/>
+						<p>Texto de la tarjeta 1</p>
+					</div>
+
+					<div class="card">
+						<img
+							src="https://via.placeholder.com/150"
+							alt="Placeholder Image"
+						/>
+						<p>Texto de la tarjeta 2</p>
+					</div>
+
+					<div class="card">
+						<img
+							src="https://via.placeholder.com/150"
+							alt="Placeholder Image"
+						/>
+						<p>Texto de la tarjeta 3</p>
+					</div>
+
+					<div class="card">
+						<img
+							src="https://via.placeholder.com/150"
+							alt="Placeholder Image"
+						/>
+						<p>Texto de la tarjeta 4</p>
+					</div>
+
+					<div class="card">
+						<img
+							src="https://via.placeholder.com/150"
+							alt="Placeholder Image"
+						/>
+						<p>Texto de la tarjeta 5</p>
+					</div>
 				</div>
 			</section>
 
@@ -64,14 +102,67 @@
 
 			<section class="noticias-eventos">
 				<h1>Últimas noticias y eventos</h1>
-				<div class="tarjeta-eventos"></div>
-				<div class="tarjeta-eventos"></div>
-				<div class="tarjeta-eventos"></div>
+				<div class="container">
+					<div class="card">
+						<img src="https://placeholder.pics/svg/100x200" alt="" />
+						<div class="text-noticias">
+							<h2>
+								EchoTech anuncia avance significativo en la investigación del
+								cáncer
+							</h2>
+							<p>
+								La compañía EchoTech S.L. ha descubierto una nueva molécula
+								prometedora para el tratamiento del cáncer en pruebas con
+								animales y está en ensayos con humanos.
+							</p>
+							<button>Saber más</button>
+						</div>
+					</div>
+					<div class="card">
+						<img src="https://placeholder.pics/svg/100x200" alt="" />
+						<div class="text-noticias">
+							<h2>
+								EchoTech dona millones de dólares para combatir el COVID-19
+							</h2>
+							<p>
+								EchoTech S.L. dona millones de dólares para apoyar la lucha contra el
+								COVID-19, incluyendo suministros médicos y fondos para la
+								investigación de la vacuna y terapias, y trabaja con
+								organizaciones para asegurar que los recursos lleguen a quienes
+								los necesitan.
+							</p>
+                            <button >Saber más</button>
+						</div>
+					</div>
+				</div>
 			</section>
 		</main>
 
 		<footer>
-			<p>Copyright &copy; 2023</p>
+			<div class="general-info">
+				<div class="contact-info">
+					<p>Dirección: 1234 Calle Principal, Ciudad, País</p>
+					<p>Teléfono: 123-456-7890</p>
+					<p>Correo electrónico: info@farmaceutica.com</p>
+				</div>
+
+				<div class="useful-links">
+					<a href="https://www.who.int/es"> Organización Mundial de la Salud</a>
+					<a href="https://medlineplus.gov/spanish/"> MedlinePlus</a>
+				</div>
+
+				<div class="site-map">
+					<a href="index.html">Inicio</a>
+					<a href="productos.html">Productos</a>
+					<a href="nosotros.html">Nosotros</a>
+					<a href="contacto.html">Contacto</a>
+				</div>
+			</div>
+			<div class="legal-info">
+				<a href="privacidad.html">Política de privacidad</a>
+				<a href="terminos.html">Términos y condiciones</a>
+				<p>&copy; 2023 EchoTech S.A. Todos los derechos reservados.</p>
+			</div>
 		</footer>
 	</body>
 </html>
