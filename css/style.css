@@ -414,7 +414,7 @@ section.productos {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 70vh;
+    width: 100vh;
 }
 
 .formulario img {
@@ -500,11 +500,6 @@ section.productos {
 
 }
 
-.horario-oficina tr:hover {
-    background-color: var(--color-enlace);
-    color: var(--color-fondo);
-}
-
 .horario-oficina th {
     background-color: var(--color-texto);
     color: var(--color-fondo);
@@ -521,6 +516,11 @@ section.productos {
 
 .horario-oficina tr:nth-child(even) {
     background-color: var(--color-separador);
+    color: var(--color-fondo);
+}
+
+.horario-oficina tr:hover {
+    background-color: var(--color-enlace);
     color: var(--color-fondo);
 }
 
