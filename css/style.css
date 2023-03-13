@@ -580,7 +580,10 @@ footer a:hover {
 /* Fin footer */
 
 /* Media querys */
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 800px) {
+    body {
+        height: auto;
+    }
 
     /* Navbar */
     nav {
@@ -614,6 +617,13 @@ footer a:hover {
 
     .heading-home p {
         display: none;
+    }
+
+    /* Historia */
+
+    .hist-imgtext {
+        display: flex;
+        flex-direction: column;
     }
 
     /* Formulario */
